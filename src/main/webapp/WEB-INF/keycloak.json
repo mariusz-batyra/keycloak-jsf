@@ -1,0 +1,9 @@
+{
+  "realm": "keycloack-test",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLBuQc58alYLg7TXeeXlHvk53QZNxT2Y9KdITY9yZfeirdzpWjgOPr9M0tOat7LmgTGCoIqdEOriIYt4s14i/LuG/W4bkNd2NWR3+leMvo8HD7mjcFQ8yKOMHXhwwbdne83qyOU8sp3l+wSYpKH4nUDGNXgj6sevVYsNio6waMR0YQdKL9Xs0tPSq8oegb2tp5mMBGWWPIsmIju1DHm4w/u0IKhc1K8SjaWe1fuYhNS4efIC2eKA1DuSd9jE0Dee2gVPDC6UKdHM8X9q29PPktBRKnKXycb7y7Box6PzbJFK/NgmMLSVPWZzEVKbPfLoSMDA9zMDsiYlEvttkrF2MwIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "keycloak-jsf",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}

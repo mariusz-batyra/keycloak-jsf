@@ -14,10 +14,28 @@
         <servlet-name>NonSecuredServlet</servlet-name>
         <servlet-class>pl.keycloak.jsf.servlet.NonSecuredServlet</servlet-class>
     </servlet>
-
+    
     <servlet-mapping>
         <servlet-name>NonSecuredServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
+        
+    <!-- keycloak configuration -->
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/secured/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <login-config>
+        <auth-method>KEYCLOAK</auth-method>
+    </login-config>
+    
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
     
 </web-app>
