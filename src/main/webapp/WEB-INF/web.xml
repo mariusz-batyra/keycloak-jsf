@@ -10,4 +10,14 @@
         <session-timeout>30</session-timeout>
     </session-config>
     
+    <servlet>
+        <servlet-name>NonSecuredServlet</servlet-name>
+        <servlet-class>pl.keycloak.jsf.servlet.NonSecuredServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NonSecuredServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
