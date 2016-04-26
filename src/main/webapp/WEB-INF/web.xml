@@ -14,12 +14,20 @@
         <servlet-name>NonSecuredServlet</servlet-name>
         <servlet-class>pl.keycloak.jsf.servlet.NonSecuredServlet</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>SecuredServlet</servlet-name>
+        <servlet-class>pl.keycloak.jsf.servlet.SecuredServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>NonSecuredServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
-        
+    <servlet-mapping>
+        <servlet-name>SecuredServlet</servlet-name>
+        <url-pattern>/secured/test</url-pattern>
+    </servlet-mapping>
+    
     <!-- keycloak configuration -->
     <security-constraint>
         <web-resource-collection>
