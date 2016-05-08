@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-         version="3.1">
-    
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <module-name>keycloak-jsf</module-name>
-    
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-    
     <servlet>
         <servlet-name>NonSecuredServlet</servlet-name>
-        <servlet-class>pl.keycloak.jsf.servlet.NonSecuredServlet</servlet-class>
+        <servlet-class>pl.mbatyra.keycloak.jsf.servlet.NonSecuredServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SecuredServlet</servlet-name>
-        <servlet-class>pl.keycloak.jsf.servlet.SecuredServlet</servlet-class>
+        <servlet-class>pl.mbatyra.keycloak.jsf.servlet.SecuredServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>NonSecuredServlet</servlet-name>
         <url-pattern>/test</url-pattern>
@@ -27,7 +20,6 @@
         <servlet-name>SecuredServlet</servlet-name>
         <url-pattern>/secured/test</url-pattern>
     </servlet-mapping>
-    
     <!-- keycloak configuration -->
     <security-constraint>
         <web-resource-collection>
@@ -37,13 +29,10 @@
             <role-name>user</role-name>
         </auth-constraint>
     </security-constraint>
-    
     <login-config>
         <auth-method>KEYCLOAK</auth-method>
     </login-config>
-    
     <security-role>
         <role-name>user</role-name>
     </security-role>
-    
 </web-app>

@@ -1,4 +1,4 @@
-package pl.keycloak.jsf.servlet;
+package pl.mbatyra.keycloak.jsf.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
